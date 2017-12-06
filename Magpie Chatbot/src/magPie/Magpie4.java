@@ -65,38 +65,6 @@ public class Magpie4 {
 		if (statement.length() < 1) {
 			response = "Say something, please.";
 		} 
-		else if (findKeyword(statement, "No") >= 0) {
-			response = "Why so negative?";
-		} 
-		else if (findKeyword(statement, "Mother") >= 0 || findKeyword(statement, "Father") >= 0 || findKeyword(
-				statement, "Brother") >= 0 || findKeyword(statement, "Sister") >= 0) {
-			response = "Tell me more about your family.";
-		} 
-		else if (findKeyword(statement, "Dog") >= 0 || findKeyword(statement, "Cat") >= 0) {
-			response = "Tell me more about your pets.";
-		} 
-		else if (findKeyword(statement, "Grossi") >= 0) {
-			response = "He sounds like a programming good teacher.";
-		} 
-		else if (findKeyword(statement, "Hello") >= 0) {
-			response = "Hello there!";
-		} 
-		else if (findKeyword(statement, "I hate you") >= 0) {
-			response = "I hate you too.";
-		} 
-		else if (findKeyword(statement, "I love you") >= 0) {
-			response = "Ewww.";
-		}
-		else if (findKeyword(statement, "Oof") >= 0) {
-			response = "Oof";
-		}
-		// Responses which require transformations
-		else if (findKeyword(statement, "I want to") >= 0) {
-			response = transformIWantToStatement(statement);
-		} 
-		else if (findKeyword(statement, "I want") >= 0) {
-			response = transformIWantStatement(statement);
-		} 
 		else if (findKeyword(statement, "What do I like") >= 0) {
 			response = transformWhatDoILikeStatement(statement);
 		} 
@@ -165,6 +133,37 @@ public class Magpie4 {
 		} 
 		else if (findKeyword(statement, "favorite class") >= 0) {
 			response = transformFavoriteClassStatement(statement);
+		} 
+		else if (findKeyword(statement, "No") >= 0) {
+			response = "Why so negative?";
+		} 
+		else if (findKeyword(statement, "Mother") >= 0 || findKeyword(statement, "Father") >= 0 || findKeyword(
+				statement, "Brother") >= 0 || findKeyword(statement, "Sister") >= 0) {
+			response = "Tell me more about your family.";
+		} 
+		else if (findKeyword(statement, "Dog") >= 0 || findKeyword(statement, "Cat") >= 0) {
+			response = "Tell me more about your pets.";
+		} 
+		else if (findKeyword(statement, "Grossi") >= 0) {
+			response = "He sounds like a programming good teacher.";
+		} 
+		else if (findKeyword(statement, "Hello") >= 0) {
+			response = "Hello there!";
+		} 
+		else if (findKeyword(statement, "I hate you") >= 0) {
+			response = "I hate you too.";
+		} 
+		else if (findKeyword(statement, "I love you") >= 0) {
+			response = "Ewww.";
+		}
+		else if (findKeyword(statement, "Oof") >= 0) {
+			response = "Oof";
+		}
+		else if (findKeyword(statement, "I want to") >= 0) {
+			response = transformIWantToStatement(statement);
+		} 
+		else if (findKeyword(statement, "I want") >= 0) {
+			response = transformIWantStatement(statement);
 		} 
 		else {
 			// Look for a two word (you <something> me)
