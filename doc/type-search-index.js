@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"magPie","l":"MagPie1"},{"p":"magPie","l":"Magpie3"},{"p":"magPie","l":"Magpie4"},{"p":"magPie","l":"MagpieRunner"},{"p":"magPie","l":"StringExplorer"}]
